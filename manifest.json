@@ -1,0 +1,23 @@
+{
+	"manifest_version" : 2,
+	"name" : "Cool chrome landing page",
+	"short_name": "Chrome Desktop",
+	"description" : "The default chrome landing page is boring, let's make it fun",
+	"author": "Ogurinka Benjamin",
+	"version" : "1.0.2",
+	"icons" : {
+		"16": "img/favicon.ico",
+		"48": "img/icon-48x48.png",
+		"128" : "img/icon-128x128.png"
+	},
+	"browser_action" : {
+		"default_icon" : "img/icon-48x48.png",
+		"default_popup": "popup.html",
+		"default_title": "Chrome start screen"
+	},
+	"chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+	"permissions" : ["activeTab"]
+
+}
