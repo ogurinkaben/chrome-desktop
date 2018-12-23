@@ -7,40 +7,6 @@ body {
 
 canvas {
   display: block;
-  vertical-align: bottom;
-}
-
-.pop-container {
-  text-align: center;
-  padding: 50px;
-  width: 300px;
-  margin: 0 auto;
-  font-family: "Montserrat", sans-serif;
-}
-
-.pop-container .btn {
-  padding: 14px 16px;
-  text-decoration: none;
-  background: #222;
-  color: #FFF;
-  border-radius: 10px;
-}
-
-.pop-container .footer {
-  padding: 20px;
-  font-size: 20px;
-}
-
-.pop-container .footer .fa-heart {
-  color: #bc1e1b;
-}
-
-.pop-container .footer .fa-js-square {
-  color: #eaad1b;
-}
-
-.pop-container .footer .fa-sass {
-  color: #c69;
 }
 
 #home {
@@ -56,6 +22,7 @@ canvas {
   -webkit-animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation: backgrounds 50s ease infinite;
+  animation:backgrounds 50s ease infinite;
   -o-animation: backgrounds 50s ease infinite;
   animation-name: backgrounds;
   animation-duration: 10s;
@@ -214,6 +181,17 @@ canvas {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #FFF;
+}
+
+#home .content #quotebox {
+  padding: 20px 0;
+  font-size: 1.5em;
+  font-family: 'Raleway', sans-serif;
+}
+
+#home .content #quotebox .btn {
+  border: none;
+  padding: 14px 16px;
 }
 
 #home .content .user {

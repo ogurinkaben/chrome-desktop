@@ -15,37 +15,7 @@ body {
   
   canvas {
     display: block;
-    vertical-align: bottom;
   }
-
-.pop-container {
-    text-align: center;
-    padding: 50px;
-    width: 300px;
-    margin: 0 auto;
-    font-family: "Montserrat", sans-serif;
-   .btn {
-       padding: 14px 16px;
-       text-decoration: none;
-       background:#222;
-       color:#FFF;
-       border-radius: 10px;
-   }
-   .footer {
-       padding: 20px;
-       font-size: 20px;
-       .fa-heart {
-           color: #bc1e1b;
-           
-       }
-       .fa-js-square {
-           color:#eaad1b
-       }
-       .fa-sass {
-           color: #c69;
-       }
-   }
-}
 
 
   #home{
@@ -200,6 +170,16 @@ body {
         text-align: center;
         transform: translate(-50%, -50%);
         color:#FFF;
+        #quotebox {
+          padding: 20px 0;
+          font-size: 1.5em;
+          font-family:'Raleway', sans-serif;
+          .btn {
+            border:none;
+            padding: 14px 16px;
+          }
+                
+        }
         .user {
             font-size: 70px;
             font-family: 'Montserrat', sans-serif;
