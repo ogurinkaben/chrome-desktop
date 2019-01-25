@@ -8,3 +8,4 @@ This extension was inspired by [Bolaji Ayodeji](https://github.com/BolajiAyodeji
 * Runs offline
 * Displays current time and date
 * Shows message snippet based on the time of the day.
+* Colorful backgrounds
