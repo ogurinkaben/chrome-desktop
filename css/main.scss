@@ -15,10 +15,10 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
     transform: translate(-50% , -50%);
     -webkit-transform: translate(-50%, -50%);
-    font-size: 3em;
-    font-family: 'Raleway',sans-serif;
+    font-family: 'Space Mono',sans-serif;
     text-align: left;
         #msg {
             font-size: 30px;
@@ -30,7 +30,7 @@ body {
         }
 
         #time {
-            font-size: 50px;
+            font-size: 100px;
             text-align: center;
         }
 
@@ -51,11 +51,10 @@ body {
 
 .pop-container {
     text-align: center;
-    padding: 50px;
-    width: 50%;
-    height: auto;
+    padding: 3em;
+    width: 100%;
     margin: 0 auto;
-    font-family: "Montserrat", sans-serif;
+    font-family: "monospace", sans-serif;
 
     .btn {
         padding: 14px 16px;
@@ -65,21 +64,4 @@ body {
         border-radius: 10px;
     }
 
-    .footer {
-        padding: 20px;
-        font-size: 20px;
-
-        .fa-heart {
-            color: #bc1e1b;
-
-        }
-
-        .fa-js-square {
-            color: #eaad1b
-        }
-
-        .fa-sass {
-            color: #c69;
-        }
-    }
 }

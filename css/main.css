@@ -15,10 +15,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  font-size: 3em;
-  font-family: 'Raleway',sans-serif;
+  font-family: 'Space Mono',sans-serif;
   text-align: left;
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 .inner-text #time {
-  font-size: 50px;
+  font-size: 100px;
   text-align: center;
 }
 
@@ -47,11 +47,10 @@ body {
 
 .pop-container {
   text-align: center;
-  padding: 50px;
-  width: 50%;
-  height: auto;
+  padding: 3em;
+  width: 100%;
   margin: 0 auto;
-  font-family: "Montserrat", sans-serif;
+  font-family: "monospace", sans-serif;
 }
 
 .pop-container .btn {
@@ -60,22 +59,5 @@ body {
   background: #222;
   color: #FFF;
   border-radius: 10px;
-}
-
-.pop-container .footer {
-  padding: 20px;
-  font-size: 20px;
-}
-
-.pop-container .footer .fa-heart {
-  color: #bc1e1b;
-}
-
-.pop-container .footer .fa-js-square {
-  color: #eaad1b;
-}
-
-.pop-container .footer .fa-sass {
-  color: #c69;
 }
 /*# sourceMappingURL=main.css.map */
