@@ -1,28 +1,11 @@
-var morningBg = [
-  'img/morning/morning1.jpg',
-  'img/morning/morning2.jpg',
-  'img/morning/morning3.jpg',
-  'img/morning/morning4.jpg',
-  'img/morning/morning5.jpg',
+var bg =
+  ['/img/bg/bg-1.jpg',
+    '/img/ng/bg-2.jpg',
+    'img/bg/bg-3.jpg',
+    'img/bg/bg-4.jpg',
+    'img/bg/bg-5.jpg'];
 
-
-]
-var dayBg = [
-  'img/day/day1.jpg',
-  'img/day/day2.jpg',
-  'img/day/day3.jpg',
-  'img/day/day4.jpg',
-  'img/day/day5.jpg',
-
-]
-
-
-var nightBackground =
-  ['/img/night/night-bg.jpg',
-    '/img/night/mojave-night.jpg',
-    'img/night/night1.jpg',
-    'img/night/night2.jpg',
-    'img/night/night3.jpg']
+     document.querySelector("body").style.backgroundImage = "url(" + bg[Math.floor(Math.random() * bg.length)] + ")";
     
 
 
@@ -62,13 +45,11 @@ function checkTime(i) {
   var ch = time.getHours();
 if (ch >= 18 && ch <= 23) {
   document.getElementById("msg").innerHTML = "Having a sublime night?";
-  document.querySelector("body").style.backgroundImage = "url(" + nightBackground[Math.floor(Math.random() * nightBackground.length)] + ")";
+ 
 }
 else if (ch >= 12 && ch < 18) {
   document.getElementById("msg").innerHTML = "Having a good day?";
-  document.querySelector("body").style.backgroundImage = "url(" + dayBg[Math.floor(Math.random() * dayBg.length)] + ")";
   } 
   else {
   document.getElementById("msg").innerHTML = "Good Morning";
-  document.querySelector("body").style.backgroundImage = "url(" + morningBg[Math.floor(Math.random() * morningBg.length)] + ")";
 }
