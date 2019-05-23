@@ -1,11 +1,28 @@
 var bg =
   ['/img/bg/bg-1.jpg',
-    '/img/ng/bg-2.jpg',
     'img/bg/bg-3.jpg',
     'img/bg/bg-4.jpg',
     'img/bg/bg-5.jpg'];
 
-     document.querySelector("body").style.backgroundImage = "url(" + bg[Math.floor(Math.random() * bg.length)] + ")";
+document.querySelector("body").style.backgroundImage = "url(" + bg[Math.floor(Math.random() * bg.length)] + ")";
+    const secondHand = document.querySelector('.second-hand');
+    const minsHand = document.querySelector('.min-hand');
+    const hourHand = document.querySelector('.hour-hand');
+  function setDate() {
+    const now = new Date();
+    const seconds = now.getSeconds();
+    const secondsDegrees = seconds * 6;
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+    const mins = now.getMinutes();
+    const minsDegrees = mins * 6;
+    minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+    const hour = now.getHours();
+    const hourDegrees = hour * 30;
+    hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+  }
+  setInterval(setDate, 1000);
+  setDate();
+
     
 
 

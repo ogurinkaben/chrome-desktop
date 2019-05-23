@@ -60,4 +60,62 @@ body {
   color: #FFF;
   border-radius: 10px;
 }
-/*# sourceMappingURL=main.css.map */
+.clock-face {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 400px;
+  width: 400px;
+  opacity: .3;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.hour-hand {
+  position: absolute;
+  height: 80px;
+  width: 8px;
+  margin: auto;
+  top: -20%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  background-color: #507D9C;
+  transform-origin: bottom;
+  transform: rotate(0deg);
+}
+
+.min-hand {
+  position: absolute;
+  height: 120px;
+  width: 8px;
+  margin: auto;
+  top: -30%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  background-color: #507D9C;
+  transform-origin: bottom;
+  transform: rotate(90deg);
+}
+
+.second-hand {
+  position: absolute;
+  height: 120px;
+  width: 2px;
+  margin: auto;
+  top: -30%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  background-color: #507D9C;
+  transform-origin: bottom;
+  transform: rotate(180deg);
+}
+
