@@ -52,7 +52,7 @@ function checkTime(i) {
         formatAMPM = (hh >= 12 ? 'PM' : 'AM');
       hh = hh % 12 || 12;
       currentTime.innerHTML = hh + "<span>:</span>" + timer(mm) + "<span>:</span>" + timer(ss) + " " + formatAMPM;
-      setTimeout(updateTime, 1000);
+      setInterval(updateTime, 1000);
     }
     updateTime();
   }
