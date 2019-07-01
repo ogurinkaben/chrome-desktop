@@ -5,14 +5,10 @@ var bg =
     'img/bg/bg-5.jpg'];
 
 document.querySelector("body").style.backgroundImage = "url(" + bg[Math.floor(Math.random() * bg.length)] + ")";
-    const secondHand = document.querySelector('.second-hand');
     const minsHand = document.querySelector('.min-hand');
     const hourHand = document.querySelector('.hour-hand');
   function setDate() {
     const now = new Date();
-    const seconds = now.getSeconds();
-    const secondsDegrees = seconds * 6;
-    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
     const mins = now.getMinutes();
     const minsDegrees = mins * 6;
     minsHand.style.transform = `rotate(${minsDegrees}deg)`;
