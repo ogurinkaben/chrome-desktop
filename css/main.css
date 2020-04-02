@@ -3,49 +3,54 @@ body {
   overflow: hidden;
   background-position: center;
   background-repeat: no-repeat;
-  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-	background-size: 200% 200%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
-  background-blend-mode: multiply;
+  background-size: cover;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+    url(../img/bg/bg-5.jpg);
   height: 100vh;
   width: 100%;
   color: #fff;
 }
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.moment {
+  width: auto;
+}
+
 .inner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  font-family: 'Space Mono',sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: left;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  background: rgba(0, 0, 0, .7);
+  padding: 1rem;
+
+}
+
+.inner-text p {
+  margin: 5px;
 }
 
 .inner-text #msg {
   font-size: 30px;
-  text-align: center;
 }
 
 .inner-text #date {
-  font-size: 35px;
-  text-align: center;
+  font-size: 24px;
+  font-family: 'Overpass Mono', sans-serif;
 }
 
 .inner-text #time {
-  font-size: 100px;
-  text-align: center;
-}
-
-.inner-text .gt {
-  display: inline-block;
-  font-weight: 900;
-  font-size: 80px;
-  margin: 0;
-  line-height: 1;
+  font-size: 50px;
 }
 
 .pop-container {
@@ -63,98 +68,3 @@ body {
   color: #FFF;
   border-radius: 10px;
 }
-.clock-face {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 400px;
-  width: 400px;
-  opacity: .3;
-  border: 3px solid #fff;
-  border-radius: 50%;
-}
-
-.hour-hand {
-  position: absolute;
-  height: 80px;
-  width: 8px;
-  margin: auto;
-  top: -20%;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: 4px;
-  background-color: #507D9C;
-  transform-origin: bottom;
-  transform: rotate(0deg);
-}
-
-.min-hand {
-  position: absolute;
-  height: 120px;
-  width: 8px;
-  margin: auto;
-  top: -30%;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: 4px;
-  background-color: #507D9C;
-  transform-origin: bottom;
-  transform: rotate(90deg);
-}
-
-.second-hand {
-  position: absolute;
-  height: 120px;
-  width: 2px;
-  margin: auto;
-  top: -30%;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: 4px;
-  background-color: #507D9C;
-  transform-origin: bottom;
-  transform: rotate(180deg);
-}
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-
