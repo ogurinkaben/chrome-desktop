@@ -13,11 +13,32 @@
     <section class="wrapper">
         <div class="moment">
             <div class="inner-text">
-                <p id="msg"></p>
-                <p id="time"></p>
-                <p id="date"></p>
+                <div id="digital-clock">
+                    <p id="time"></p>
+                    <div>
+                        <span id="today"></span>
+                        <span id="date"></span>
+                    </div>
+                    <div>
+                        <span id="month"></span>
+                        <span id="year"></span>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="note-wrapper">
+            <div>
+                <h1>Take Short Note...</h1>
+                <form id="note-form" class="ui-form">
+                    <input type="text" id="noteTitle" class="ui-input" placeholder="Title">
+                    <textarea id="shortNote" placeholder="Note" class="ui-textarea"></textarea>
+                    <div>
+                        <input type="submit" value="Submit" class="ui-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="note-list"></div>
     </section>
     <script src="js/script.js"></script>
 </body>

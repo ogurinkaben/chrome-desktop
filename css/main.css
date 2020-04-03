@@ -11,13 +11,94 @@ body {
   color: #fff;
 }
 
+.success,
+.error {
+  color: white;
+  padding: 5px;
+  margin: 5px 0 15px 0;
+  position: fixed;
+  top: 0;
+  font-size: 14px;
+}
+
+.success {
+  background: green;
+}
+
+.error {
+  background: red;
+}
+
 .wrapper {
-  display: flex;
-  align-items: center;
   min-height: 100vh;
-  justify-content: space-around;
-  width: 90%;
+  display: flex;
+  width: 100%;
   margin: 0 auto;
+  padding: 10px;
+}
+
+.note-wrapper {
+  background: rgba(0, 0, 0, 0.6);
+  min-width: 500px;
+  max-height: 600px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  display: flex;
+  box-shadow: 10px 10px 14px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.ui-list {
+  padding: 10px;
+  margin: 0 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  max-height: 800px;
+  max-width: 400px;
+  max-width: 400px;
+  position: relative;
+}
+
+.ui-list p {
+  display: inline-block;
+}
+
+.ui-form {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.ui-input,
+.ui-textarea {
+  padding: 10px;
+  background: transparent;
+  color: #f2f2f2;
+  width: 100%;
+  margin: 8px auto;
+  border: 1px solid #ddd;
+}
+
+.ui-btn {
+  border: none;
+  position: relative;
+  display: block;
+  margin: 30px 0;
+  padding: 10px 28px;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: #2ecc71;
+  color: #ecf0f1;
+  transition: background-color .3s;
+  cursor: pointer;
+}
+
+.ui-textarea {
+  height: 100px;
 }
 
 .moment {
@@ -26,31 +107,41 @@ body {
 
 .inner-text {
   font-family: 'Poppins', sans-serif;
-  text-align: left;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: auto;
+  width: 500px;
   background: rgba(0, 0, 0, .7);
   padding: 1rem;
 
 }
 
 .inner-text p {
-  margin: 5px;
+  margin: 10px 0;
 }
 
-.inner-text #msg {
-  font-size: 30px;
+.inner-text span {
+  letter-spacing: 6px;
 }
 
-.inner-text #date {
-  font-size: 24px;
-  font-family: 'Overpass Mono', sans-serif;
+.inner-text #time,
+.inner-text #today,
+.inner-text #date,
+.inner-text #month,
+.inner-text #year {
+  font-size: 50px;
+  font-weight: 800;
+  opacity: 0.7;
 }
 
 .inner-text #time {
-  font-size: 50px;
+  opacity: 1;
+}
+
+.inner-text #date {
+  padding-left: 8px;
+}
+
+.inner-text #month:after,
+.inner-text #today:after {
+  content: ", ";
 }
 
 .pop-container {
@@ -58,7 +149,11 @@ body {
   padding: 3em;
   width: 100%;
   margin: 0 auto;
-  font-family: "monospace", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.pop-container h1 {
+  font-size: 16px;
 }
 
 .pop-container .btn {
