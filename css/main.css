@@ -47,15 +47,6 @@ button:hover {
   cursor: pointer;
 }
 
-.todo-error {
-  font-size: 14px;
-}
-
-
-.todo-error span {
-  color: #f00;
-}
-
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -71,7 +62,6 @@ button:hover {
 .inner-text {
   font-family: 'Poppins', sans-serif;
   width: 500px;
-  min-height: 440px;
   background: rgba(0, 0, 0, .7);
   padding: 1rem;
 
@@ -91,7 +81,7 @@ button:hover {
 .inner-text #month,
 .inner-text #year {
   font-size: 50px;
-  font-family: 'Poppins-Bold', sans-serif;
+  font-family: 'Poppins-Regular', sans-serif;
   opacity: 0.7;
 }
 
@@ -126,170 +116,4 @@ button:hover {
   background: #222;
   color: #FFF;
   border-radius: 10px;
-}
-
-/*todo*/
-
-.todo-wrapper {
-  position: relative;
-  box-shadow: 0 0 5px rgba(25, 25, 25, 0.25);
-  margin: 0 10px;
-  max-height: 60vh;
-}
-
-
-.app {
-  overflow-y: auto;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  min-height: 440px;
-  max-height: 60vh;
-  min-width: 500px;
-  padding: 1rem;
-  background: rgba(0, 0, 0, .7);
-}
-
-.btn {
-  font-size: 14px;
-  margin: 0 0.5em;
-  border-radius: 2px;
-  padding: 0.75em 1.5em;
-  cursor: pointer;
-  border: 1px solid;
-  letter-spacing: 1px;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #fff;
-  background: #4fc08d;
-  transition: 250ms ease-out;
-}
-
-.btn.filters__btn {
-  background: none;
-  color: #fff;
-  border: none;
-  border-bottom: 2px solid #4fc08d;
-}
-
-.btn:hover,
-.btn:focus {
-  color: #fff;
-  background: #4fc08d;
-  outline: none !important;
-}
-
-.form {
-  width: 100%;
-  padding: 1.5rem 1rem 0 1rem;
-  display: flex;
-}
-
-.todo-list {
-  max-height: 300px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.form__input {
-  width: 100%;
-  font-size: 14px;
-  margin: 0 0.5em;
-  border-radius: 2px;
-  padding: 0.75em 1.5em;
-  background: none;
-  font-family: 'Source Sans Pro', sans-serif;
-  border: #e3e3e3 1px solid;
-  transition: border 250ms ease-out;
-  color: #fff;
-}
-
-.form__input:focus {
-  border: #fff 1px solid;
-  outline: none;
-}
-
-.todo-list {
-  width: 100%;
-  padding: 0 1rem;
-  flex: 1;
-}
-
-.todo-list__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5em;
-  margin-bottom: 0.5em;
-  border-radius: 3px;
-  transition: 200ms;
-  font-size: 14px;
-  color: #fff;
-}
-
-.todo-list__item.complete .todo-list__item-content:focus {
-  outline: none;
-  outline-color: transparent;
-}
-
-.todo-list__item:last-child {
-  margin-bottom: 0;
-}
-
-.todo-list__item.complete {
-  color: lightgreen;
-}
-
-.todo-list__item.complete .todo-list__item-content {
-  font-size: 14px;
-
-}
-
-.todo-list__item.complete .todo-list__item-content:after {
-  background: lightgreen;
-}
-
-.todo-list__item.complete .todo-list__item-content:hover {
-  border: none;
-}
-
-.todo-list__item-content {
-  position: relative;
-}
-
-.todo-list__item-remove {
-  margin-left: 0.5em;
-  background: none;
-  border: 1px solid;
-  color: inherit;
-  padding: 0;
-  line-height: 1;
-  width: 2em;
-  height: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 80%;
-}
-
-.filters {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding: 0 1rem 1.5rem 1rem;
-}
-
-.list-move,
-.list-leave-active,
-.list-enter-active {
-  transition: 500ms cubic-bezier(0.87, -0.41, 0.19, 1.44);
-}
-
-.list-enter,
-.list-leave-active {
-  transform: translate(100%, 0);
-  opacity: 0;
 }
