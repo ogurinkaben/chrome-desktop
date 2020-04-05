@@ -1,34 +1,85 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>New tab</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="img/ico" href="img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="img/ico" href="./dist/img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./lib/fontawesome/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./lib/materialize/css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" href="./dist/css/main.css" />
+  </head>
 
-<body>
+  <body>
     <section class="wrapper">
-        <div class="moment">
-            <div class="inner-text">
-                <div id="digital-clock">
-                    <p id="time"></p>
-                    <div>
-                        <span id="today"></span>
-                        <span id="date"></span>
-                    </div>
-                    <div>
-                        <span id="month"></span>
-                        <span id="year"></span>
-                    </div>
-                </div>
+      <div class="moment">
+        <div class="inner-text">
+          <div id="digital-clock">
+            <p id="time"></p>
+            <div>
+              <span id="today"></span>
+              <span id="date"></span>
             </div>
+            <div>
+              <span id="month"></span>
+              <span id="year"></span>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="tasklist">
+        <div class="">
+          <div class="row">
+            <div class="col s12">
+              <div id="main" class="card">
+                <div class="card-content">
+                  <span class="card-title">What are you doing today?</span>
+                  <div class="row">
+                    <form id="task-form">
+                      <span class="msg"></span>
+                      <div class="input-field col s12">
+                        <input
+                          type="text"
+                          name="task"
+                          id="task"
+                          placeholder="New Task"
+                        />
+                      </div>
+                      <input
+                        type="submit"
+                        value="Add Task"
+                        class="btn btn-add"
+                      />
+                    </form>
+                  </div>
+                </div>
+                <div class="card-action">
+                  <div class="input-field col s12">
+                    <input
+                      type="text"
+                      name="filter"
+                      id="filter"
+                      placeholder="Filter"
+                    />
+                  </div>
+                  <ul class="collection"></ul>
+                  <a href="#" class="clear-tasks btn black">Clear Tasks</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <script src="js/script.js"></script>
-</body>
-
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="./lib/materialize/js/materialize.min.js"
+    ></script>
+    <script src="./dist/js/script.js"></script>
+  </body>
 </html>

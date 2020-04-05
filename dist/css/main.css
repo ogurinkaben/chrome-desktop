@@ -14,7 +14,7 @@
 }
 
 * {
-  font-family: 'Poppins-Regular', sans-serif;
+  font-family: "Poppins-Regular", sans-serif;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../img/bg/bg-5.jpg);
   height: 100vh;
   width: 100%;
@@ -60,11 +60,10 @@ button:hover {
 }
 
 .inner-text {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   width: 500px;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0.7);
   padding: 1rem;
-
 }
 
 .inner-text p {
@@ -81,7 +80,7 @@ button:hover {
 .inner-text #month,
 .inner-text #year {
   font-size: 50px;
-  font-family: 'Poppins-Regular', sans-serif;
+  font-family: "Poppins-Regular", sans-serif;
   opacity: 0.7;
 }
 
@@ -114,6 +113,49 @@ button:hover {
   padding: 14px 16px;
   text-decoration: none;
   background: #222;
-  color: #FFF;
+  color: #fff;
   border-radius: 10px;
+}
+.tasklist {
+  background: rgba(0, 0, 0, 0.7);
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 15px;
+}
+.input-field,
+.btn {
+  display: block;
+  width: 95%;
+  margin: 5px auto;
+}
+.input-field input {
+  color: #f2f2f2;
+}
+.tasklist .card,
+.tasklist .card-action {
+  background: transparent;
+}
+.tasklist .card {
+  width: 500px;
+  position: relative;
+}
+.tasklist .card .collection {
+  border-color: transparent;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.tasklist .card .collection .collection-item {
+  color: #fff;
+  background: transparent;
+  border: none;
+}
+.tasklist .card .collection .collection-item .fa-trash {
+  color: #f00;
+  cursor: pointer;
+}
+.msg {
+  display: none;
+  margin: 5px auto;
+  text-align: center;
 }
