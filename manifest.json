@@ -4,12 +4,11 @@
 	"short_name": "Chrome Desktop",
 	"description": "The default chrome landing page is boring, let's make it fun",
 	"author": "Ogurinka Benjamin",
-	"version": "1.1.0",
+	"version": "1.1.03",
 	"icons":
 	{
-		"16": "i./mg/favicon.ico",
-		"48": "./img/icon-48x48.png",
-		"128": "./img/icon-128x128.png"
+
+		"48": "img/icon-48x48.png"
 	},
 	"browser_action":
 	{

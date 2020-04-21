@@ -79,7 +79,7 @@ button:hover {
 .inner-text #date,
 .inner-text #month,
 .inner-text #year {
-  font-size: 50px;
+  font-size: 36px;
   font-family: "Poppins-Regular", sans-serif;
   opacity: 0.7;
 }
@@ -139,6 +139,10 @@ button:hover {
 .tasklist .card {
   width: 500px;
   position: relative;
+}
+.tasklist .card .card-title {
+  text-align: center;
+  margin-bottom: 1.6rem;
 }
 .tasklist .card .collection {
   border-color: transparent;
