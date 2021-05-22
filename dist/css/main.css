@@ -24,7 +24,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../img/bg/bg-5.jpg);
+    url("https://source.unsplash.com/featured/1920x1080");
   height: 100vh;
   width: 100%;
   color: #fff;
@@ -116,6 +116,7 @@ button:hover {
   color: #fff;
   border-radius: 10px;
 }
+
 .tasklist {
   background: rgba(0, 0, 0, 0.7);
   max-height: 500px;
@@ -123,41 +124,50 @@ button:hover {
   overflow-x: hidden;
   margin: 0 15px;
 }
+
 .input-field,
 .btn {
   display: block;
   width: 95%;
   margin: 5px auto;
 }
+
 .input-field input {
   color: #f2f2f2;
 }
+
 .tasklist .card,
 .tasklist .card-action {
   background: transparent;
 }
+
 .tasklist .card {
   width: 500px;
   position: relative;
 }
+
 .tasklist .card .card-title {
   text-align: center;
   margin-bottom: 1.6rem;
 }
+
 .tasklist .card .collection {
   border-color: transparent;
   max-height: 300px;
   overflow-y: auto;
 }
+
 .tasklist .card .collection .collection-item {
   color: #fff;
   background: transparent;
   border: none;
 }
+
 .tasklist .card .collection .collection-item .fa-trash {
   color: #f00;
   cursor: pointer;
 }
+
 .msg {
   display: none;
   margin: 5px auto;
