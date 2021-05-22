@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="img/ico" href="./dist/img/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="./lib/fontawesome/css/all.min.css" />
-  <link rel="stylesheet" href="./lib/materialize/css/materialize.min.css" />
   <link rel="stylesheet" type="text/css" href="./dist/css/main.css" />
 </head>
 
@@ -15,10 +14,13 @@
   <section class="wrapper">
     <div class="moment">
       <div class="inner-text">
+        <img src="./img/usr/coding.svg" class="img" alt="">
         <div id="digital-clock">
-          <p id="time"></p>
+          <span id="time"></span>
           <div>
-            <span id="today"></span>
+            <span id="today">
+              <div class="loader"></div>
+            </span>
             <span id="date"></span>
           </div>
           <div>
@@ -26,8 +28,17 @@
             <span id="year"></span>
           </div>
         </div>
+
       </div>
+      <form id="search" method="get" action="https://www.google.com/search">
+        <div class="search-box">
+          <i id="searchicon" class="fa fa-search"></i>
+          <input type="text" name="q" placeholder="Search...">
+        </div>
+      </form>
+
     </div>
+
   </section>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="./lib/materialize/js/materialize.min.js"></script>

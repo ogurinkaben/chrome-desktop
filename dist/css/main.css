@@ -1,17 +1,4 @@
-@font-face {
-  font-family: Poppins-Bold;
-  src: url(../font-family/Poppins-Bold.ttf);
-}
-
-@font-face {
-  font-family: Poppins-ExtraBold;
-  src: url(../font-family/Poppins-ExtraBold.ttf);
-}
-
-@font-face {
-  font-family: Poppins-Regular;
-  src: url(../font-family/Poppins-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
   font-family: "Poppins-Regular", sans-serif;
@@ -23,11 +10,50 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))),
+    url("https://source.unsplash.com/featured/1920x1080");
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://source.unsplash.com/featured/1920x1080");
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://source.unsplash.com/featured/1920x1080");
   height: 100vh;
   width: 100%;
   color: #fff;
+  font-size: 16px;
+}
+
+.loader {
+  border: 4px solid #666;
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 button {
@@ -49,21 +75,39 @@ button:hover {
 
 .wrapper {
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
   margin: 0 auto;
   padding: 10px;
 }
 
 .moment {
-  width: auto;
+  width: 600px;
 }
 
 .inner-text {
+  position: relative;
   font-family: "Poppins", sans-serif;
-  width: 500px;
+  width: 100%;
+  min-height: 30vh;
   background: rgba(0, 0, 0, 0.7);
   padding: 1rem;
+  border-radius: 1rem;
+}
+
+.inner-text .img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
 }
 
 .inner-text p {
@@ -71,7 +115,7 @@ button:hover {
 }
 
 .inner-text span {
-  letter-spacing: 6px;
+  letter-spacing: unset;
 }
 
 .inner-text #time,
@@ -79,23 +123,25 @@ button:hover {
 .inner-text #date,
 .inner-text #month,
 .inner-text #year {
-  font-size: 36px;
-  font-family: "Poppins-Regular", sans-serif;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
   opacity: 0.7;
 }
 
 .inner-text #time {
+  position: relative;
+  display: inline;
   opacity: 1;
+  font-size: 3rem;
+  font-family: "Orbitron", sans-serif;
 }
+
+
 
 .inner-text #date {
   padding-left: 8px;
 }
 
-.inner-text #month:after,
-.inner-text #today:after {
-  content: ", ";
-}
 
 .pop-container {
   text-align: center;
@@ -117,59 +163,38 @@ button:hover {
   border-radius: 10px;
 }
 
-.tasklist {
+/* Search Box */
+.search-box {
+  width: 100%;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-radius: 1rem;
   background: rgba(0, 0, 0, 0.7);
-  max-height: 500px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  margin: 0 15px;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto;
 }
 
-.input-field,
-.btn {
-  display: block;
-  width: 95%;
-  margin: 5px auto;
-}
-
-.input-field input {
-  color: #f2f2f2;
-}
-
-.tasklist .card,
-.tasklist .card-action {
-  background: transparent;
-}
-
-.tasklist .card {
-  width: 500px;
-  position: relative;
-}
-
-.tasklist .card .card-title {
-  text-align: center;
-  margin-bottom: 1.6rem;
-}
-
-.tasklist .card .collection {
-  border-color: transparent;
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.tasklist .card .collection .collection-item {
-  color: #fff;
-  background: transparent;
+.search-box input {
   border: none;
+  height: 40px;
+  border-radius: 1rem;
+  width: 90%;
+  background: transparent;
+  color: #fff;
 }
 
-.tasklist .card .collection .collection-item .fa-trash {
-  color: #f00;
-  cursor: pointer;
+.search-box input:focus {
+  outline: none;
 }
 
-.msg {
-  display: none;
-  margin: 5px auto;
-  text-align: center;
+.search-box i {
+  color: #999;
 }

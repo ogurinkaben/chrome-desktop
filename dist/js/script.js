@@ -1,14 +1,14 @@
 // Time and Date
 function digitalClock() {
-  var todayHTML = document.getElementById("today");
-  var monthHTML = document.getElementById("month");
-  var timeHTML = document.getElementById("time");
-  var dateHTML = document.getElementById("date");
-  var yearHTML = document.getElementById("year");
-  var d = new Date();
-  var year = d.getFullYear();
-  var month = d.getMonth();
-  var date = d.getDate();
+  let todayHTML = document.getElementById("today"),
+    monthHTML = document.getElementById("month"),
+    timeHTML = document.getElementById("time"),
+    dateHTML = document.getElementById("date"),
+    yearHTML = document.getElementById("year"),
+    d = new Date(),
+    year = d.getFullYear(),
+    month = d.getMonth(),
+    date = d.getDate();
   date = addZero(date);
   var hours = d.getHours();
   hours = addZero(hours);
@@ -41,9 +41,9 @@ function digitalClock() {
     "December",
   ];
   timeHTML.innerHTML = hours + " : " + minutes + " : " + seconds;
-  todayHTML.innerHTML = dayName[today];
+  todayHTML.innerHTML = `${dayName[today]},`;
   dateHTML.innerHTML = date;
-  monthHTML.innerHTML = monthName[month];
+  monthHTML.innerHTML = `${monthName[month]},`;
   yearHTML.innerHTML = year;
 }
 
