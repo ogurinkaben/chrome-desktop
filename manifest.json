@@ -4,9 +4,6 @@
   "version": "2.0.0",
   "description": "The default Chrome landing page is boring, let's make it fun",
   "author": "Ogurinka Benjamin",
-  "icons": {
-    "48": "img/icon-48x48.png"
-  },
   "action": {
     "default_icon": "img/icon-48x48.png",
     "default_popup": "popup.html",
@@ -15,10 +12,12 @@
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   },
-  "permissions": ["tabs", "activeTab", "topSites", "http://*/*", "https://*/*"],
-  "host_permissions": ["http://*/*", "https://*/*"],
+  "permissions": ["tabs", "activeTab", "topSites"],
   "icons": {
     "48": "img/icon-48x48.png",
     "128": "img/icon-128x128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' https://unpkg.com; object-src-elem 'self'"
   }
 }

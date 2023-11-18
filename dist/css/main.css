@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   font-family: "Poppins-Regular", sans-serif;
@@ -8,14 +8,20 @@ body {
   height: 100vh;
   overflow: hidden;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.6)),
+      to(rgba(0, 0, 0, 0.6))
+    ),
     url("https://source.unsplash.com/featured/1920x1080");
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://source.unsplash.com/featured/1920x1080");
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://source.unsplash.com/featured/1920x1080");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   width: 100%;
   color: #fff;
@@ -136,12 +142,9 @@ button:hover {
   font-family: "Orbitron", sans-serif;
 }
 
-
-
 .inner-text #date {
   padding-left: 8px;
 }
-
 
 .pop-container {
   text-align: center;
