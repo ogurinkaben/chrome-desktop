@@ -18,6 +18,16 @@ input:focus {
 .ex-branding {
   max-width: 100px;
 }
+.pop-container {
+  min-width: 480px;
+  height: 200px;
+  color: var(--app-white);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .loader {
   height: 100vh;
   width: 100%;
@@ -157,6 +167,7 @@ input:focus {
   justify-content: flex-start;
 }
 .ex-select-input,
+.ex-button,
 .ex-pagination button {
   min-width: 120px;
   background: var(--app-dark);
