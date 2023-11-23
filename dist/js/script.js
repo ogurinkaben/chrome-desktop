@@ -96,7 +96,7 @@ async function displayArticles(page, tag) {
     const paginationDiv = document.createElement("div");
     paginationDiv.classList.add("ex-pagination");
     const prevButton = document.createElement("button");
-    prevButton.innerHTML = `Previous <i class="bi bi-arrow-left"></i>`;
+    prevButton.innerHTML = ` <i class="bi bi-arrow-left"></i> Previous`;
     prevButton.addEventListener("click", () => {
       if (currentPage > 1) {
         currentPage--;
