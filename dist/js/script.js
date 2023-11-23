@@ -9,6 +9,7 @@ const articleTags = [
   { name: "React", value: "react" },
   { name: "Vue", value: "vue" },
 ];
+let selectedArticleTag = articleTags[0].value;
 const tagSelect = createTagSelect();
 function shortenString(str, maxLength = 70) {
   if (str.length <= maxLength) {
@@ -19,8 +20,8 @@ function shortenString(str, maxLength = 70) {
 }
 tagSelect.addEventListener("change", async function () {
   currentPage = 1;
-  const selectedTag = tagSelect.value;
-  displayArticles(currentPage, selectedTag);
+  selectedArticleTag = tagSelect.value;
+  displayArticles(currentPage, selectedArticleTag);
 });
 function createTagSelect() {
   const articleSelectList = document.getElementById("articleTags");
@@ -95,18 +96,18 @@ async function displayArticles(page, tag) {
     const paginationDiv = document.createElement("div");
     paginationDiv.classList.add("ex-pagination");
     const prevButton = document.createElement("button");
-    prevButton.textContent = "Previous";
+    prevButton.innerHTML = `Previous <i class="bi bi-arrow-left"></i>`;
     prevButton.addEventListener("click", () => {
       if (currentPage > 1) {
         currentPage--;
-        displayArticles(currentPage);
+        displayArticles(currentPage, selectedArticleTag);
       }
     });
     const nextButton = document.createElement("button");
     nextButton.innerHTML = `Next <i class="bi bi-arrow-right"></i>`;
     nextButton.addEventListener("click", () => {
       currentPage++;
-      displayArticles(currentPage);
+      displayArticles(currentPage, selectedArticleTag);
     });
     paginationDiv.appendChild(prevButton);
     paginationDiv.appendChild(nextButton);
@@ -134,4 +135,4 @@ async function fetchDevToArticles(page, tag) {
   }
 }
 
-displayArticles(currentPage, articleTags[0]);
+displayArticles(currentPage, selectedArticleTag);
