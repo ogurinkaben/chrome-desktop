@@ -5,42 +5,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="img/ico" href="./img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="./dist/css/main.css" />
     <link
       rel="stylesheet"
-      type="text/css"
-      href="./lib/fontawesome/css/all.min.css"
+      href="./lib/bootstrap-icons/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="./dist/css/main.css" />
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
   </head>
 
   <body>
-    <section class="wrapper">
-      <div class="moment">
-        <form id="search" method="get" action="https://www.google.com/search">
-          <div class="search-box">
-            <i id="searchicon" class="fa fa-search"></i>
-            <input type="text" name="q" placeholder="Search..." />
-          </div>
-        </form>
-        <div class="inner-text">
-          <img src="./img/usr/coding.svg" class="img" alt="" />
-          <div id="digital-clock">
-            <span id="time"></span>
-            <div>
-              <span id="today">
-                <div class="loader"></div>
-              </span>
-              <span id="date"></span>
-            </div>
-            <div>
-              <span id="month"></span>
-              <span id="year"></span>
-            </div>
-          </div>
-        </div>
+    <div class="container-lg py-5">
+      <div id="loader" class="loader">
+        <div class="loader__content"></div>
       </div>
-    </section>
-    <script src="./lib/vue/index.js"></script>
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <div>
+          <img src="./img/dev.png" class="ex-branding" alt="" />
+        </div>
+        <div id="articleTags"></div>
+      </div>
+      <div id="contentWrapper" class="row"></div>
+    </div>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./dist/js/script.js"></script>
   </body>
 </html>

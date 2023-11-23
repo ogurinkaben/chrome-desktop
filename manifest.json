@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Cool Chrome Landing Page",
+  "name": "Chrome Desktop",
   "version": "2.0.0",
-  "description": "The default Chrome landing page is boring, let's make it fun",
+  "description": "The default Chrome landing page is boring, so I play around with it every now and then.",
   "author": "Ogurinka Benjamin",
   "action": {
     "default_icon": "img/icon-48x48.png",
@@ -16,8 +16,5 @@
   "icons": {
     "48": "img/icon-48x48.png",
     "128": "img/icon-128x128.png"
-  },
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' https://unpkg.com; object-src-elem 'self'"
   }
 }
